@@ -1,0 +1,5 @@
+if (Meteor.isClient) {
+	Template.images.helpers({
+    	images: function() {return Images.find();}
+  	});
+}

@@ -1,0 +1,16 @@
+<template name="images">
+	<div class="container">
+		<h1>These are the images</h1>
+		<a href="/">Back to vote</a>
+		<div>
+			{{#each images}}
+				<div class="image-result"><img src="{{_id}}"><p>
+					{{#each this.vote}}
+						{{this}}
+					{{/each}}
+				</p>
+				</div>	        	
+	    	{{/each}}
+    	</div>
+	</div>
+</template>

@@ -1,0 +1,40 @@
+.container {
+	max-width: 600px;
+	margin: 0 auto 0 auto;
+	text-align: center;
+}
+
+h3 {
+	display: block;
+}
+
+.buttons {
+	display : block;
+}
+
+.image-result {
+	display: inline-block;
+}
+
+.btn {
+	min-width: 100px;
+	margin-left: 20;
+	margin-right: 20px;
+	margin-top: 30px;
+}
+
+
+table {
+	margin-top: 50px;
+	width:100%;
+	border: solid 1px lightgray;
+}
+
+.th-name {
+	width : 80%;
+}
+
+
+.th-points {
+	width : 20%;
+}

@@ -1,0 +1,40 @@
+<head>
+  <title>crowdsourcing-nofs</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+</head>
+
+<template name="home">
+	{{#if currentUser}} 
+	<div class="crowdsourcer container">
+		{{> loginButtons}}
+		<h3>{{name}}, does this image contains a solar panel?</h3>
+		{{ > image }}
+		{{ > buttons }}
+		{{ > leaderboard }}
+		<a href="/images">Curious about the results?</a>
+	</div>
+	{{/if}}
+</template>
+
+	
+<template name="image">
+	<img src="{{url}}" id="#cs-image">
+</template>
+
+<template name="buttons">
+	<div class="buttons">
+		<button id="yesbutton" type="button" class="btn btn-primary">Yes</button>
+		<button id="nobutton" type="button" class="btn btn-danger">No</button>
+	</div>
+</template>
+
+<template name="leaderboard">
+	<table id="#leaderboard">
+		<tr>
+			<th class="th-name">Name</th> <th class="th-points">Points</th>
+		</tr>
+		{{#each users}}
+	        <tr><td>{{services.github.username}}</td><td>{{profile.count}}</td></tr>
+	    {{/each}}
+	</table>	
+</template>
